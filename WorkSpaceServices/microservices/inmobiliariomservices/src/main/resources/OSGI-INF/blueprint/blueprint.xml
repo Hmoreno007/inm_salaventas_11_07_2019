@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint
+    xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:cxf="http://camel.apache.org/schema/blueprint/cxf"
+    xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0"
+    xsi:schemaLocation="
+        http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd">
+
+    <cm:property-placeholder persistent-id="com.digitrust.esb.cxf.receive" update-strategy="reload">
+        <cm:default-properties>
+            <cm:property name="CXFserver" value="http://localhost:8989/"/>
+            <cm:property name="service" value="mservices" />
+        </cm:default-properties>
+    </cm:property-placeholder>
+
+    <reference filter="(&amp;(objectClass=javax.sql.DataSource)(dataSourceName=bancolminmobiliarioservices))" id="dataSourceMs" interface="javax.sql.DataSource">
+        <reference-listener bind-method="onBind" unbind-method="onUnbind">
+            <bean class="com.digitrust.esb.inmobiliario.ListenerBean"/>
+        </reference-listener>
+    </reference>
+    
+    <bean class="org.apache.camel.component.sql.SqlComponent" id="sqlmsvrs">
+        <property name="dataSource" ref="dataSourceMs"/>
+    </bean>
+    
+    <bean id="InmobiliarioHandler" class="com.digitrust.esb.inmobiliario.service.InmobiliarioHandler" init-method="init" destroy-method="destroy">
+        <property name="dataSource" ref="dataSourceMs"/>
+    </bean>
+
+    <cxf:rsServer id="rsServer" address="${CXFserver}${service}"
+                  serviceClass="com.digitrust.esb.inmobiliario.service.InmobiliarioService"
+                  loggingFeatureEnabled="true" loggingSizeLimit="20"/>
+
+    <camelContext xmlns="http://camel.apache.org/schema/blueprint" >
+        <propertyPlaceholder id="placeholder" location="classpath:sql.properties"/>
+        <dataFormats>
+            <json id="xstream" prettyPrint="true"/>
+            <json id="jackson" prettyPrint="true" library="Jackson"/>
+            <json id="gson" prettyPrint="true" library="Gson"/>
+            <json id="json" library="Jackson" useList="true" />
+        </dataFormats>
+        
+        <route id="InmobiliarioServiceRoute">
+            <from uri="cxfrs:bean:rsServer?bindingStyle=SimpleConsumer" />
+            <recipientList>
+                <simple>direct-vm:${header.operationName}</simple>
+            </recipientList>
+        </route>
+ 
+        <route id="consultarUsuarios">
+            <from uri="direct-vm:consultarUsuarios" />
+            <log message="consultarUsuarios invocation with bean: ${body}\n\n"/>
+            <bean method="consultarUsuarios" ref="InmobiliarioHandler"/>
+            <marshal ref="gson"/>
+        </route>
+       
+       
+         <route id="consultaUsuarioContrasena">
+            <from uri="direct-vm:consultaUsuarioContrasena" />
+            <log message="consultaUsuarioContrasena invocation with bean: ${body}\n\n"/>
+            <bean method="consultaUsuarioContrasena" ref="InmobiliarioHandler"/>
+            <marshal ref="gson"/>
+        </route>
+        
+        <route id="consultaEstados">
+            <from uri="direct-vm:consultaEstados" />
+            <log message="consultaEstados invocation with bean: ${body}\n\n"/>
+            <bean method="consultaEstados" ref="InmobiliarioHandler"/>
+            <marshal ref="gson"/>
+        </route>
+        
+        <route id="consultaTipoInmuebles">
+            <from uri="direct-vm:consultaTipoInmuebles" />
+            <log message="consultaTipoInmuebles invocation with bean: ${body}\n\n"/>
+            <bean method="consultaTipoInmuebles" ref="InmobiliarioHandler"/>
+            <marshal ref="gson"/>
+        </route>
+        
+        <route id="consultaConstructora">
+            <from uri="direct-vm:consultaConstructora" />
+            <log message="consultaConstructora invocation with bean: ${body}\n\n"/>
+            <bean method="consultaConstructora" ref="InmobiliarioHandler"/>
+            <marshal ref="gson"/>
+        </route>
+        
+        <route id="configuracionxfideicomiso">
+            <from uri="direct-vm:configuracionxfideicomiso" />
+            <log message="configuracionxfideicomiso invocation with bean: ${body}\n\n"/>
+            <bean method="configuracionxfideicomiso" ref="InmobiliarioHandler"/>
+            <marshal ref="gson"/>
+        </route>
+        
+        <route id="consultarPerfilUsuarios">
+            <from uri="direct-vm:consultarPerfilUsuarios" />
+            <log message="consultarPerfilUsuarios invocation with bean: ${body}\n\n"/>
+            <bean method="consultarPerfilUsuarios" ref="InmobiliarioHandler"/>
+            <marshal ref="gson"/>
+        </route>
+        
+    </camelContext>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</blueprint>
