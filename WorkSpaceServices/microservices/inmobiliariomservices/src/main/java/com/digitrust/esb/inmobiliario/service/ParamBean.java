@@ -5,14 +5,13 @@
  */
 package com.digitrust.esb.inmobiliario.service;
 
-import javax.ws.rs.QueryParam;
+import javax.ws.rs.PathParam;
 
 /**
  *
  * @author bswndeshm
  */
-public class ParametrosBean {
-    
-     @QueryParam("usuario") String usuario;
-     @QueryParam("contrasena") String contrasena;
+public class ParamBean {
+     @PathParam("tipodocumento")
+     private String codigo;
 }

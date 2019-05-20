@@ -8,8 +8,8 @@ package com.digitrust.esb.inmobiliario.service;
 import javax.ws.rs.BeanParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
 /**
@@ -25,9 +25,9 @@ public class InmobiliarioService {
     public Response consultarUsuarios() { return null; }
     
     @GET
-    @Path("/usuariosContrasena/v01/")
+    @Path("/usuariosContrasena/v01/") 
     @Produces("application/json")
-    public Response consultaUsuarioContrasena(@QueryParam("usuario")String usuario,@QueryParam("contrasena")String contrasena) { return null; } 
+    public Response consultaUsuarioContrasena(@BeanParam ParametrosBean input) { return null; } 
     
     @GET
     @Path("/estados/v01/")
@@ -35,9 +35,9 @@ public class InmobiliarioService {
     public Response consultaEstados() { return null; } 
     
     @GET
-    @Path("/estadosbyid/v01/{codigo}")
+    @Path("/estadosbyid/v01/{codigo}") 
     @Produces("application/json")
-    public Response consultaEstadosById(@BeanParam ParamBean codigo) { return null; }
+    public Response consultaEstadosById(@PathParam("codigo") String codigo) { return null; }
     
     @GET
     @Path("/consultatipoinm/v01/")
@@ -53,7 +53,7 @@ public class InmobiliarioService {
     @GET
     @Path("/configuracionxfideicomiso/v01/{codigotipofideicomiso}/{codigosubtipofideicomiso}/{codigofideicomiso}/{etapafideicomiso}")
     @Produces("application/json")
-    public Response consultaConfigXfideicomiso() { return null; }    
+    public Response consultaConfigXfideicomiso(@BeanParam ParametroConfiguracionBeanParam input) { return null; }    
     
     @GET
     @Path("/consultarperfiles/v01/")
