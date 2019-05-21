@@ -11,7 +11,7 @@ package com.digitrust.esb.inmobiliario.service.helpers;
  */
 public class SentenceHelper {
 
-    public static final String Query__Usuarios = "SELECT  USERNAME, PASSWORD_RAW, IDENTIFICACION, CLASE_DOCUMENTO, EMAIL, NOMBRE, PERFIL, ESTADO, ULT_CONEXION FROM INM_USUARIOS";
+    public static final String Query__Usuarios = "SELECT  USERNAME, PASSWORD_RAW, IDENTIFICACION, CLASE_DOCUMENTO, EMAIL, NOMBRE, PERFIL, ESTADO, ULT_CONEXION, CEO_SN, ADM_SN, PRO_SN, CLI_SN FROM INM_USUARIOS";
 
     public static final String Query_Contrasena = "SELECT NOMBRE, PERFIL, ESTADO  FROM inm_usuarios WHERE username= '?'";
 

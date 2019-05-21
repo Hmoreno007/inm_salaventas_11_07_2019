@@ -43,6 +43,10 @@ public class GestionUsuarios {
             usr.setPerfil(rst.getString("PERFIL"));
             usr.setEstado(rst.getString("ESTADO"));
             usr.setFechaUltiConex(rst.getDate("ULT_CONEXION"));
+            usr.setCeo_sn(rst.getString("CEO_SN"));
+            usr.setAdm_sn(rst.getString("ADM_SN"));
+            usr.setPro_sn(rst.getString("PRO_SN"));
+            usr.setCli_sn(rst.getString("CLI_SN"));
             result.getUsuarios().add(usr);
         }
         rst.close();

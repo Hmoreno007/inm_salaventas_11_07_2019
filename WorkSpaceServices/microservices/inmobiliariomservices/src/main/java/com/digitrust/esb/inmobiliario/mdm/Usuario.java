@@ -23,7 +23,13 @@ public class Usuario {
 
     private String confirmarContrasena;
 
-    private String rol;
+    private String ceo_sn;
+    
+    private String adm_sn;
+    
+    private String pro_sn;
+    
+    private String cli_sn;
 
     private String nombre;
 
@@ -71,12 +77,36 @@ public class Usuario {
         this.confirmarContrasena = confirmarContrasena;
     }
 
-    public String getRol() {
-        return rol;
+    public String getCeo_sn() {
+        return ceo_sn;
     }
 
-    public void setRol(String rol) {
-        this.rol = rol;
+    public void setCeo_sn(String ceo_sn) {
+        this.ceo_sn = ceo_sn;
+    }
+
+    public String getAdm_sn() {
+        return adm_sn;
+    }
+
+    public void setAdm_sn(String adm_sn) {
+        this.adm_sn = adm_sn;
+    }
+
+    public String getPro_sn() {
+        return pro_sn;
+    }
+
+    public void setPro_sn(String pro_sn) {
+        this.pro_sn = pro_sn;
+    }
+
+    public String getCli_sn() {
+        return cli_sn;
+    }
+
+    public void setCli_sn(String cli_sn) {
+        this.cli_sn = cli_sn;
     }
 
     public String getNombre() {
@@ -135,5 +165,6 @@ public class Usuario {
         this.fechaUltiConex = fechaUltiConex;
     }
 
+    
    
 }

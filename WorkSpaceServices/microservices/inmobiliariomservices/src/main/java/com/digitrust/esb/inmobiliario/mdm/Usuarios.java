@@ -23,5 +23,6 @@ public class Usuarios {
     public void setUsuarios(ArrayList<Usuario> usuarios) {
         this.usuarios = usuarios;
     }
-    
+
+  
 }
