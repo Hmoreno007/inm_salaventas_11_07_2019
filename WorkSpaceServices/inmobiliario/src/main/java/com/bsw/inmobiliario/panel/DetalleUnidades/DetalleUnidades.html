@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../node_modules/w3-css/w3.css">
+    <link rel="stylesheet" href="../assents/app.css">
+    <title>
+      Detalle de unidad 
+    </title>
+  </head>
+  <body>
+    <div class="w3-container">
+      <div class="w3-row">
+        <from class="w3-col s12 m12 l10 w3-card w3-padding">
+        <div class="w3-col s12 m3 l3 w3-padding">
+          <label>Unidad No</label>
+          <input Wicket:id="numeroUnidad" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s12 m6 l3 w3-padding">
+          <label>Estado</label>
+          <select Wicket:id="estado" class="w3-select" name="option">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+        </div>
+        <div class="w3-col s12 m3 l3 w3-padding">
+          <label>Numero</label>
+          <input Wicket:id="numero" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s12 m4 l3 w3-padding">
+          <label>Targeta</label>
+          <input Wicket:id="tarjeta" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s12 m4 l3 w3-padding">
+          <label>Entrega</label>
+          <input Wicket:id="fechaEntrega" class="w3-input" type="Date">
+        </div>
+        <div class="w3-col s12 m4 l3 w3-padding">
+          <label>Fecha Separación</label>
+          <input Wicket:id="fechaSeparacion" class="w3-input" type="Date">
+        </div>
+        <div class="w3-col s12 m6 l6 w3-padding">
+          <label>Inmueble</label>
+          <input Wicket:id="codigoInmueble" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s12 m3 l3 w3-padding">
+          <label>Área Priv</label>
+          <input Wicket:id="areaPrivada" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s12 m3 l3 w3-padding">
+          <label>Área Cons</label>
+          <input Wicket:id="areaConstruida" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s12 m12 l6 w3-padding">
+          <label>Detalle</label>
+          <input Wicket:id="detalleInmueble" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s12 m3 l2 w3-padding">
+          <label>Torre</label>
+          <select  Wicket:id="torres" class="w3-select" name="option">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+        </div>
+        <div class="w3-col s12 m3 l2 w3-padding">
+          <label>Piso</label>
+          <select Wicket:id="pisos" class="w3-select" name="option">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+        </div>
+        <div class="w3-col s12 m3 l2 w3-padding">
+          <label>Int</label>
+          <select Wicket:id="interior" class="w3-select" name="option">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+        </div>
+        <div class="w3-col s12 m3 l2 w3-padding">
+          <label>Mza</label>
+          <select Wicket:id="manzana" class="w3-select" name="option">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+        </div>
+        <div class="w3-col s12 m3 l2 w3-padding">
+          <label>Albs</label>
+          <input Wicket:id="alcoba" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s12 m3 l2 w3-padding">
+          <label>Baño</label>
+          <input Wicket:id="bano" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s6 m3 l2 w3-padding">
+          <label>Ctos Útiles</label>
+          <input Wicket:id="cuartosUtiles" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s6 m3 l2 w3-padding">
+          <label>Parqueaderos</label>
+          <input Wicket:id="parqueos" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s12 m12 l12">
+          <div class="w3-col s6 m6 l3 w3-padding">
+            <input Wicket:id="" class="w3-check" type="checkbox" checked="checked">
+            <label>Balcón</label>
+          </div>
+          <div class="w3-col s6 m6 l3 w3-padding">
+            <input Wicket:id="" class="w3-check" type="checkbox" checked="checked">
+            <label>Ropas</label>
+          </div>
+        </div>
+        <div class="w3-col s12 m12 l12 w3-padding">
+          <label>Cocina</label>
+          <input  Wicket:id="cocina" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s12 m12 l12 w3-padding">
+          <label>Observación</label>
+          <input Wicket:id="observacion" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s12 m12 l12 w3-padding w3-center">
+          Valores
+        </div>
+        <div class="w3-col s12 m3 l3 w3-padding">
+          <label>Precio Inmueble</label>
+          <input Wicket:id="precioInmueble" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s12 m3 l3 w3-padding">
+          <label>Precio Separacion</label>
+          <input Wicket:id="precioSeparacion" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s12 m3 l3 w3-padding">
+          <label>Unidad</label>
+          <input Wicket:id="precioUnidad" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s12 m3 l3 w3-padding">
+          <label>Incr Util (x 1)</label>
+          <input Wicket:id="precioIncrementoUtil" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s12 m3 l3 w3-padding">
+          <label>Incr Piso (x 1)</label>
+          <input Wicket:id="precioIncrementoPiso" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s12 m3 l3 w3-padding">
+          <label>Incr Parq (x 1)</label>
+          <input Wicket:id="precioIncrementoPaqueadero" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s12 m3 l3 w3-padding">
+          <label>Cuo Ini 30%</label>
+          <input Wicket:id="cuotaInicial" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s12 m3 l3 w3-padding">
+          <label>Credito</label>
+          <input Wicket:id="credito" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s12 m3 l3 w3-padding">
+          <label>Total</label>
+          <input Wicket:id="total" class="w3-input" type="text">
+        </div>
+        <div class="w3-col s12 m12 l12 w3-center w3-padding">
+          <button class="w3-button w3-black ">Guardar</button>
+        </div>
+        </from>
+      </div>
+    </div>
+  </body>
+</html>

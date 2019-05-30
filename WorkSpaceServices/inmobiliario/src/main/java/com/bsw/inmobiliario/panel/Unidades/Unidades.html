@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../node_modules/w3-css/w3.css">
+    <link rel="stylesheet" href="../node_modules/material-design-icons/iconfont/material-icons.css">
+    <link rel="stylesheet" href="../assents/app.css">
+    <title>
+      Crear unidades
+    </title>
+  </head>
+  <body>
+    <div class="w3-container">
+      <div class="w3-row">
+        <div class="w3-col s12 m6 l4 w3-card w3-padding">
+          <div class="w3-col s12 m12 l12">
+            <label for="">
+              Moneda
+            </label>
+            <select wicket:id="monedas"  class="w3-select" name="option">
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+          </div>
+		  <div class="w3-col s12 m12 l12">
+            <label for="">
+              Cantidad Unidades
+            </label>
+            <input wicket:id="cantidadUnidades" class="w3-input" type="text">
+          </div>
+          <div class="w3-col s12 m12 l12">
+            <label for="">
+              Tipo
+            </label>
+            <select wicket:id="tipos" class="w3-select" name="option">
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+          </div>
+          <div class="w3-col s12 m12 l12 w3-center">
+            <button class="w3-button w3-black w3-margin">Guardar</button>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
