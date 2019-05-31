@@ -32,8 +32,8 @@ public class UsuariosGrid extends Panel {
     public UsuariosGrid(String id) {
         super(id);
         this.setOutputMarkupId(true).setOutputMarkupPlaceholderTag(true);
+
         usaurioobj = new UsuariosModelo();
-        
         LoadableDetachableModel<List<UsuariosBean>> listausuarios = new LoadableDetachableModel<List<UsuariosBean>>() {
             @Override
             protected List<UsuariosBean> load() {

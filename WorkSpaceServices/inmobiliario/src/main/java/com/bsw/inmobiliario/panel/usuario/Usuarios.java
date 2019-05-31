@@ -8,6 +8,8 @@ import java.util.List;
 import org.apache.wicket.markup.html.form.CheckBox;
 import org.apache.wicket.markup.html.form.ChoiceRenderer;
 import org.apache.wicket.markup.html.form.DropDownChoice;
+import org.apache.wicket.markup.html.form.EmailTextField;
+import org.apache.wicket.markup.html.form.PasswordTextField;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.LoadableDetachableModel;
 import org.apache.wicket.model.PropertyModel;
@@ -15,9 +17,9 @@ import org.apache.wicket.model.PropertyModel;
 public class Usuarios extends Panel {
 
     private final AjaxEnabledTextField usuario;
-    private final AjaxEnabledTextField contrasena;
-    private final AjaxEnabledTextField confirmarContrasena;
-    private final AjaxEnabledTextField correo;
+    private final PasswordTextField contrasena;
+    private final PasswordTextField confirmarContrasena;
+    private final EmailTextField correo;
     private final AjaxEnabledTextField numeroIdentificacion;
     private final DropDownChoice perfil;
     private final CheckBox ceo_sn;
@@ -45,10 +47,10 @@ public class Usuarios extends Panel {
         usuario = new AjaxEnabledTextField<String>("usuario", new PropertyModel<String>(this, "usuariosBean.usuario"));
         queue(usuario);        
 
-        contrasena = new AjaxEnabledTextField<String>("contrasena", new PropertyModel<String>(this, "usuariosBean.contrasena"));
+        contrasena = new PasswordTextField("contrasena", new PropertyModel<String>(this, "usuariosBean.contrasena"));
         queue(contrasena);
 
-        confirmarContrasena = new AjaxEnabledTextField<String>("confirmarContrasena", new PropertyModel<String>(this, "usuariosBean.confirmarContrasena"));
+        confirmarContrasena = new PasswordTextField("confirmarContrasena", new PropertyModel<String>(this, "usuariosBean.confirmarContrasena"));
         queue(confirmarContrasena);
 
         LoadableDetachableModel<List<PerfilUsuario>> listaPerfil = new LoadableDetachableModel<List<PerfilUsuario>>() {
@@ -78,7 +80,7 @@ public class Usuarios extends Panel {
         nombre = new AjaxEnabledTextField<String>("nombre", new PropertyModel<String>(this, "usuariosBean.nombre"));
         queue(nombre);
 
-        correo = new AjaxEnabledTextField<String>("correo", new PropertyModel<String>(this, "usuariosBean.correo"));
+        correo = new EmailTextField("correo", new PropertyModel<String>(this, "usuariosBean.correo"));
         queue(correo);
 
         LoadableDetachableModel<List<EstadoUsuario>> listaEstado = new LoadableDetachableModel<List<EstadoUsuario>>() {

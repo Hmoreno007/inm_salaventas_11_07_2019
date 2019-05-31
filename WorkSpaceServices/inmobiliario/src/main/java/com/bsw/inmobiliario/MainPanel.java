@@ -67,7 +67,8 @@ public class MainPanel extends Panel {
                 current = usuarios;
                 target.add(current);                                
                 windowpanel.setVisible(true).isVersioned();
-                target.add(windowpanel);           
+                target.add(windowpanel);
+                                
             }
         });
 
