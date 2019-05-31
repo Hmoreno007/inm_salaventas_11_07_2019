@@ -10,5 +10,14 @@ package com.bsw.inmobiliario.panel.usuario;
  * @author bswndesim
  */
 public class PruebaCargaIvan {
+    public static void main(String[] args) {
+      
+        
+        System.out.println("Hola GIT");
+
+        
+    }
+    
+
     
 }
