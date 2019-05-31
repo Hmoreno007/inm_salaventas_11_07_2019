@@ -4,10 +4,6 @@ import com.bsw.inmobiliario.components.AjaxButtonconfigured;
 import com.bsw.inmobiliario.panel.usuario.Usuarios;
 import com.bsw.inmobiliario.panel.AbonosInmueble.AbonosInmueble;
 import com.bsw.inmobiliario.panel.Configuracion.Configuracion;
-import com.bsw.inmobiliario.panel.Constructora.Constructora;
-import com.bsw.inmobiliario.panel.DetalleUnidades.DetalleUnidades;
-import com.bsw.inmobiliario.panel.Generalidades.Generalidades;
-import com.bsw.inmobiliario.panel.PlanDePagos.PlanDePagos;
 import com.bsw.inmobiliario.panel.usuario.UsuariosGrid;
 import org.apache.wicket.Component;
 import org.apache.wicket.ajax.AjaxEventBehavior;
@@ -21,11 +17,11 @@ import org.apache.wicket.markup.html.panel.Panel;
 public class MainPanel extends Panel {
 
     private static final String CONTENT_ID = "contentpanels";
-    private AjaxButtonconfigured openusuariopanel, openusuariogrid, openconfiguracion;
+    private final AjaxButtonconfigured openusuariopanel, openusuariogrid, openconfiguracion;
     private Component current;
     private Component usuarios, usuariogrid, configuracion;
     private WebMarkupContainer root, windowpanel;
-    private AjaxLink closecontentpanels;
+    private final AjaxLink closecontentpanels;
 
     public MainPanel(String id) {
         super(id);
