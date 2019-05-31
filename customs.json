@@ -1,0 +1,13 @@
+{
+    "elements": {
+        "wicket:link": {},
+        "wicket:label": {},
+        "wicket:head": {},
+        "wicket:panel": {},
+        "wicket:extend": {}
+    },
+    "attributes": {
+        "wicket:id": {},
+        "wicket:for": {}
+    }
+}

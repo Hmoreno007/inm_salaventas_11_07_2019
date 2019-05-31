@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <title>Usuarios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <wicket:panel>
+        <div class="w3-container">
+            <div class="w3-responsive">
+                <h2>Usuarios</h2>
+                <table class="w3-table w3-striped w3-border">
+                    <wicket:container wicket:id="datatable">
+                        <tr>
+                            <th>Usuario</th>
+                            <th>Tipo Identificacion</th> 
+                            <th>Numero Identificacion</th>
+                            <th>Nombre</th> 
+                            <th>Correo</th>                                          
+                            <th>Perfil</th>
+                            <th>Estado</th>
+                            <th>Ult. Conexion</th>                    
+                            <th>Acciones</th>                                                                                            
+                        </tr>
+                        <tr>
+                            <td wicket:id="usuario">user</td>
+                            <td wicket:id="tipoIdentificacion">cc</td>
+                            <td wicket:id="numeroIdentificacion">123456</td>
+                            <td wicket:id="nombre">nom</td>
+                            <td wicket:id="correo">corr</td>                            
+                            <td wicket:id="perfil">perf</td>                            
+                            <td wicket:id="estado">estado</td>
+                            <td wicket:id="ultconexion">Ulttima conexion</td>
+                            <td >                                
+                                <button class="w3-btn fa fa-edit">
+                                </button>
+                                <button class="w3-btn fa fa-trash">
+                                </button>
+                            </td>  
+                        </tr>
+                    </wicket:container>
+                </table>
+            </div>
+        </div>
+    </wicket:panel>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<wicket:head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../node_modules/w3-css/w3.css">
+    <link rel="stylesheet" href="../assents/app.css">
+    <title>
+      Nueva configuración
+    </title>
+</wicket:head>
+<wicket:panel>
+  <body>
+    <div class="w3-container">
+      <div class="w3-row">
+        <form class="w3-col s12 m12 l8 w3-padding w3-card">
+          <div class="w3-col s3 m4 l4 w3-padding">
+            <label>
+              Código
+            </label>
+              <input wicket:id="codigo" class="w3-input" type="text">
+          </div>
+          <div class="w3-col s9 m8 l8 w3-padding">
+            <label>
+              Descripción
+            </label>
+              <input wicket:id="descripcion" class="w3-input" type="text">
+          </div>
+
+         <div class="w3-col s3 m2 l2 w3-padding">
+            <label>
+             ¿Modificable?
+            </label>
+<label><input type="checkbox" id="cbox1" value="first_checkbox"> Si</label><br>
+<input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">No</label>
+          </div>
+          <div class="w3-col s3 m2 l2 w3-padding">
+            <label>
+             ¿Múltiple?
+            </label>
+<label><input type="checkbox" id="cbox1" value="first_checkbox"> Si</label><br>
+<input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">No</label>
+          </div>
+
+
+          <div class="w3-col s12 m12 l12 w3-padding w3-center">
+            <button class="w3-btn w3-black">
+              Guardar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</wicket:panel> 

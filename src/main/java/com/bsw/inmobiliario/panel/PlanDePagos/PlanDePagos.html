@@ -1,0 +1,112 @@
+<wicket:head>
+    <link rel="stylesheet" href="../node_modules/w3-css/w3.css">
+    <link rel="stylesheet" href="../assents/app.css">
+    <title>
+        Plan de pagos 
+    </title>
+</wicket:head>
+<wicket:panel>
+    <div class="w3-container">
+        <div class="w3-row">
+            <div class="w3-col s12 m4 l3 w3-padding">
+                <label Wicket:for="numeroUnidad">
+                    Unidad
+                </label>            
+                <input Wicket:id="numeroUnidad" class="w3-input" type="text">
+            </div>
+            <div class="w3-col s12 m4 l3 w3-padding">
+                <label Wicket:for="estadoUnidad">
+                    Estado
+                </label>
+                <input Wicket:id="estadoUnidad" class="w3-input" type="text">
+            </div>
+            <div class="w3-col s12 m4 l6 w3-padding">
+                <label Wicket:for="tarjeta">
+                    Targeta
+                </label>
+                <input Wicket:id="tarjeta" class="w3-input" type="text">
+            </div>
+            <div class="w3-col s12 m12 l8 w3-padding">
+                <label Wicket:for="principal">
+                    Principal
+                </label>
+                <input Wicket:id="principal" class="w3-input" type="text">
+            </div>
+            <div class="w3-col s12 m6 l2 w3-padding">
+                <label Wicket:for="porcentajeSeparacion">
+                    Porcentaje Separacion
+                </label>
+                <input Wicket:id="porcentajeSeparacion" class="w3-input" type="text">
+            </div>
+            <div class="w3-col s12 m6 l2 w3-padding">
+                <label Wicket:for="fechaSeparacion">
+                    Fecha De Separacion
+                </label>
+                <input Wicket:id="fechaSeparacion" class="w3-input" type="Date">
+            </div>
+            <div class="w3-col s12 m6 l2 w3-padding">
+                <label Wicket:for="numeroDeCuotas">
+                    Cuotas
+                </label>
+                <input Wicket:id="numeroDeCuotas" class="w3-input" type="text">
+            </div>
+            <div class="w3-col s12 m4 l4 w3-padding">
+                <label Wicket:for="porcentajeSeparacion">
+                    Porcentaje de separacion
+                </label>
+                <input  Wicket:id="porcentajeSeparacion" class="w3-input" type="text">
+            </div>
+            <div class="w3-col s12 m4 l4 w3-padding">
+                <label Wicket:for="valorCuotaInicial">
+                    Valor Cuota inicial
+                </label>
+                <input Wicket:id="valorCuotaInicial" class="w3-input" type="text">
+            </div>
+            <div class="w3-col s12 m4 l4 w3-padding">
+                <label Wicket:for="fechaPrimerCuota">
+                    Fecha
+                </label>
+                <input Wicket:id="fechaPrimerCuota" class="w3-input" type="text">
+            </div>
+            <div class="w3-col s12 m4 l4 w3-padding">
+                <label Wicket:for="valorCredito">
+                    Créd 70%
+                </label>
+                <input Wicket:id="valorCredito" class="w3-input" type="text">
+            </div>
+            <div class="w3-col s12 m4 l4 w3-padding">
+                <label Wicket:for="fechaCredito">
+                    Fecha crédito
+                </label>
+                <input Wicket:id="fechaCredito" class="w3-input" type="text">
+            </div>
+            <div class="w3-col s12 m4 l4 w3-padding">
+                <label Wicket:for="totalInmueble">
+                    Total Unidad
+                </label>
+                <input  Wicket:id="totalInmueble" class="w3-input" type="text">
+            </div>
+            <div class="w3-col s12 m12 l12 w3-padding">
+                <div class="w3-col s12 m12 l12">
+                    <label>Calculo</label>
+                </div>
+                <div class="w3-col s6 m3 l3">
+                    <input Wicket:id="calculoAutoMan" id="role-4" class="w3-check" type="text" name="roles">
+                    <label Wicket:for="role-4">Auto</label>
+                </div>
+                <div class="w3-col s6 m3 l3">
+                    <input Wicket:id="" id="role-4" class="w3-check" type="text" name="roles">
+                    <label Wicket:for="role-4">Manual</label>
+                </div>
+            </div>
+            <div class="w3-col s12 m12 l12 w3-padding w3-center">
+                <button class="w3-btn w3-black">
+                    Calcular
+                </button>
+                <button class="w3-btn w3-black">
+                    Reiniciar
+                </button>
+            </div>
+        </div>
+    </div>
+</wicket:panel>

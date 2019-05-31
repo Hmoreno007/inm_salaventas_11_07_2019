@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Left and right column */
+.column.side {
+  width: 15%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 85%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+  <div class="w3-bar w3-light-grey w3-border ">
+  <a href="#" class="w3-bar-item w3-button w3-blue"><i class="fa fa-home"></i></a>
+  <a href="#" class="w3-bar-item w3-button" style="position: absolute; right: 90px;"><i class="fa fa-sign-in"></i></a>
+</div>
+
+
+<div class="row">
+  <div class="column side" style="background-color:#aaa;">Sala De Ventas
+  <div class="w3-sidebar w3-light-grey w3-bar-block" style="">
+  <a href="#" class="w3-bar-item w3-button">Admin Local</a>
+  <a href="#" class="w3-bar-item w3-button">LAdmin Global</a>
+  <a href="#" class="w3-bar-item w3-button">Ventas</a>
+</div>
+</div>
+  <div class="column middle" style=""><div class="w3-cell-row" style="width:100%" wicket:id="root">
+        <div class="w3-center">
+            <div class=""  >
+                <form wicket:id="mainform">
+                    <div class="w3-col s12 m6 l4">
+                        <div class="w3-padding">
+                            <button class="w3-button w3-white w3-border w3-border-black w3-round-large" wicket:id="openusuariopanel">Usuarios</button>
+                        </div>
+                    </div> 
+                    <div class="w3-col s12 m6 l4">
+                        <div class="w3-padding">
+                            <button wicket:id="openfideicomisopanel" class="w3-button w3-white w3-border w3-border-black w3-round-large">Fideicomisos</button>
+                        </div>
+                    </div>
+                    <div class="w3-col s12 m6 l4">
+                        <div class="w3-padding">
+                            <button wicket:id="openabonosinmueble" class="w3-button w3-white w3-border w3-border-black w3-round-large">Abonos</button>
+                        </div>
+                    </div>
+                     <div class="w3-col s12 m6 l4">
+                        <div class="w3-padding">
+                            <button wicket:id="openconfiguraciones" class="w3-button w3-white w3-border w3-border-black w3-round-large">Configuraciones</button>
+                        </div>
+                    </div>
+                    <div class="w3-col s12 m6 l4">
+                        <div class="w3-padding">
+                            <button wicket:id="openconstructora" class="w3-button w3-white w3-border w3-border-black w3-round-large">Constructora</button>
+                        </div>
+                    </div>
+                    <div class="w3-col s12 m6 l4">
+                        <div class="w3-padding">
+                            <button wicket:id="opendetalleunidades" class="w3-button w3-white w3-border w3-border-black w3-round-large">Detalle Uni.</button>
+                        </div>
+                    </div>
+                    <div class="w3-col s12 m6 l4">
+                        <div class="w3-padding">
+                            <button wicket:id="opengeneralidades" class="w3-button w3-white w3-border w3-border-black w3-round-large">Generalidades</button>
+                        </div>
+                    </div>
+                        <div class="w3-col s12 m6 l4">
+                        <div class="w3-padding">
+                            <button wicket:id="openplandepagos" class="w3-button w3-white w3-border w3-border-black w3-round-large">Plan De Pagos</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<wicket:head> 
+    <style>
+    </style>
+    <link rel="stylesheet" href="../node_modules/w3-css/w3.css">
+    <link rel="stylesheet" href="../assents/app.css">
+</wicket:head>
+<wicket:panel>
+    <div class="w3-container">
+        <div class="w3-row">
+            <form>
+                
+            <!--<div class="w3-col s12 m12 l12">class="w3-col s12 m10 l8 w3-card-4 w3-margin w3-padding"
+                <img src="https://www.w3schools.com/w3css/img_snowtops.jpg">
+            </div>-->        
+            <div class="w3-col s12 m6 l4 w3-padding">
+                <label wicket:for="usuario">Usuarios</label>
+                <input wicket:id="usuario" class="w3-input">
+            </div>
+            <div class="w3-col s12 m6 l4 w3-padding">
+                <label>Selecionar Perfil</label>
+                <select wicket:id="perfil" class="w3-select" name="option">                                      
+                </select>
+            </div>                
+            <div class="w3-col s12 m6 l4 w3-padding">
+                <label wicket:for="contrasena">Contraseña</label>
+                <input wicket:id="contrasena" class="w3-input">
+            </div>           
+            <div class="w3-col s12 m12 l12 w3-padding">
+                <label>Roles</label>
+                <div class="w3-col s12 m12 l12">
+                    <div class="w3-col s6 m3 l3">
+                        <input wicket:id="ceo_sn" class="w3-check" type="checkbox" name="roles">
+                        <label wicket:for="ceo_sn">CEO</label>
+                    </div>
+                    <div class="w3-col s6 m3 l3">
+                        <input wicket:id="adm_sn" class="w3-check" type="checkbox" name="roles">
+                        <label wicket:for="adm_sn">Admin</label>
+                    </div>
+                    <div class="w3-col s6 m3 l3">
+                        <input wicket:id="pro_sn" class="w3-check" type="checkbox" name="roles">
+                        <label wicket:for="pro_sn">Pro</label>
+                    </div>
+                    <div class="w3-col s6 m3 l3">
+                        <input wicket:id="cli_sn" class="w3-check" type="checkbox" name="roles">
+                        <label wicket:for="cli_sn">Cli</label>
+                    </div>
+                </div>
+            </div>
+             <div class="w3-col s12 m6 l4 w3-padding">
+                <label wicket:for="confirmarContrasena">Confirmar Contraseña</label>
+                <input wicket:id="confirmarContrasena" class="w3-input">
+            </div>
+            <div class="w3-col s12 m6 l4 w3-padding">
+                <label>Nombre</label>
+                <input wicket:id="nombre" class="w3-input">
+            </div>
+            <div class="w3-col s12 m6 l4 w3-padding">
+                <label>Correo</label>
+                <input wicket:id="correo" class="w3-input">
+            </div>
+            <div class="w3-col s12 m6 l4 w3-padding">
+                <label>Estado</label>
+                <select wicket:id="estado" class="w3-select" name="option">
+                    <option value="" disabled selected>Choose your option</option>
+                </select>
+            </div>
+            <div class="w3-col s12 m6 l4 w3-padding">
+                <label>Tipo Identificacion</label>
+                <select wicket:id="tipoIdentificacion" class="w3-select" name="option">
+                    <option value="" disabled selected>Choose your option</option>
+                </select>
+            </div>
+            <div class="w3-col s12 m6 l4 w3-padding">
+                <label>Numero Identificacion</label>
+                <input wicket:id="numeroIdentificacion" class="w3-input">
+            </div>
+            <div class="w3-row">
+                <div class="w3-col s12 m12 l12 w3-center">
+                    <button class="w3-button w3-black ">Guardar</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</wicket:panel>
