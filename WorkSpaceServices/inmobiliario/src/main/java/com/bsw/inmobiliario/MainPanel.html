@@ -12,10 +12,7 @@
                     <!--Boton Usuario -->
                     <div class="w3-col s12 m6 l4">
                         <div class="w3-container">
-                            <div class="w3-display-container">                                 
-                                 <!--<span class="w3-tag w3-display-middle">Usuarios</span>
-                                    <div class="w3-display-middle w3-display-hover">                                        
-                                    </div>-->
+                            <div class="w3-display-container">              
                                  <button style="border-radius: 30px;" wicket:id="openusuariopanel"><img src="https://image.flaticon.com/icons/svg/660/660611.svg" width="100" height="100"><br><b>Usuarios</b></button>
                             </div>
                         </div>
@@ -23,19 +20,13 @@
                      <div class="w3-col s12 m6 l4">
                         <div class="w3-container">
                             <div class="w3-display-container">                                 
-                                 <!--<span class="w3-tag w3-display-middle">Usuarios</span>
-                                    <div class="w3-display-middle w3-display-hover">                                        
-                                    </div>-->
-                                 <button style="border-radius: 30px;" wicket:id="openabonosinmueble"><img src="https://image.flaticon.com/icons/svg/660/660396.svg" width="100" height="100"><br><b>Administracion</b></button>
+                                 <button style="border-radius: 30px;" wicket:id="openusuariogrid"><img src="https://image.flaticon.com/icons/svg/660/660396.svg" width="100" height="100"><br><b>Administracion</b></button>
                             </div>
                         </div>
                     </div>  
                     <div class="w3-col s12 m6 l4">
                         <div class="w3-container">
-                            <div class="w3-display-container">                                 
-                                 <!--<span class="w3-tag w3-display-middle">Usuarios</span>
-                                    <div class="w3-display-middle w3-display-hover">                                        
-                                    </div>-->
+                            <div class="w3-display-container">                                                                  
                                  <button style="border-radius: 30px;" wicket:id="openconfiguracion"><img src="https://image.flaticon.com/icons/svg/660/660627.svg" width="100" height="100"><br><b>Ventas</b></button>
                             </div>
                         </div>
@@ -44,10 +35,11 @@
             </div>
         </div>
     </div>
-    <div class="w3-container" wicket:id="windowpanel" style="display:block">
-        <div class="w3-container">
+    <br><br>
+    <div class="w3-cell-row"  wicket:id="windowpanel">
+        <div>
             <a class="w3-right w3-button w3-tiny w3-ripple w3-padding-small w3-indigo" wicket:id="closecontentpanels" style="text-decoration: none;"><b>Close</b></a><br>
-            <div wicket:id="contentpanels"></div>
+            <div class="w3-card-2" wicket:id="contentpanels"></div>
         </div>
     </div>  
 </wicket:panel> 
