@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../node_modules/w3-css/w3.css">
+    <link rel="stylesheet" href="../assents/app.css">
+    <title>
+      Nueva configuración
+    </title>
+  </head>
+  <body>
+    <div class="w3-container">
+      <div class="w3-row">
+        <form class="w3-col s12 m12 l8 w3-padding w3-card">
+          <div class="w3-col s3 m4 l4 w3-padding">
+            <label for="codigoInmueble">
+              Inmueble
+            </label>
+            <input Wicket:id="codigoInmueble" class="w3-input" type="text">
+          </div>
+          <div class="w3-col s9 m8 l8 w3-padding">
+            <label for="descripcion">
+              Descripción
+            </label>
+            <input Wicket:id="descripcion" class="w3-input" type="text">
+          </div>
+          <div class="w3-col s3 m2 l2 w3-padding">
+            <label>
+              Torres
+            </label>
+            <input Wicket:id="torres" class="w3-input" type="text">
+          </div>
+          <div class="w3-col s4 m2 l2 w3-padding">
+            <label for="pisos">
+              Pisos
+            </label>
+            <input Wicket:id="pisos" class="w3-input" type="text"></div>
+          <div class="w3-col s5 m3 l3 w3-padding">
+            <label for="unidadPorPiso">
+              Unidad x piso
+            </label>
+            <input Wicket:id="unidadPorPiso" class="w3-input" type="text">
+          </div>
+          <div class="w3-col s12 m5 l5 w3-padding">
+            <label for="total">
+              total
+            </label>
+            <input Wicket:id="total" class="w3-input" type="text">
+          </div>
+          <div class="w3-col s12 m5 l5 w3-padding">
+            <label for="torresSN">
+              Torres SN
+            </label>
+            <input Wicket:id="torresSN" class="w3-input" type="check">
+          </div>
+          <div class="w3-col s12 m12 l12 w3-padding w3-center">
+            <button class="w3-btn w3-black">
+              Guardar
+            </button>
+            <button class="w3-btn w3-black">
+              Imagen
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

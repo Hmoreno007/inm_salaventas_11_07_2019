@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.digitrust.esb</groupId>
+        <artifactId>microservices</artifactId>
+        <version>7.0.1</version>
+    </parent>
+    <artifactId>inmobiliariomservices</artifactId>
+    <packaging>bundle</packaging>
+    <name>Digitrust::Microservicios::INMOBILIARIO</name>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-cxf</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.apache.servicemix.examples</groupId>
+            <artifactId>camel-cxf-rest-service</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Bundle-Description>${project.description}</Bundle-Description>
+                        <Import-Package>*;resolution:=optional</Import-Package>
+                        <Private-Package>com.digitrust.esb.cxf.rest.gestion.fideicomisos</Private-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <properties>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+    </properties>
+    <groupId>com.digitrust.esb.inmobiliario</groupId>
+</project>
