@@ -2,6 +2,7 @@ package com.bsw.inmobiliario.panel.usuario;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Properties;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -9,76 +10,121 @@ import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
-public class UsuariosBean implements Serializable{
+public class UsuariosBean implements Serializable {
 
-	@NotNull(message = "{UsuariosBean.usuarios.InvalidNotNullNombreUsuario}")
-        @Size(min = 1, max = 20, message = "{UsuariosBean.usuarios.InvalidSizeNombreUsuario}")
-	@Pattern(regexp="[A-Za-z0-9]+", message = "{UsuariosBean.usuarios.InvalidPatternNombreUsuario}")
-	private String usuario;
+    @NotNull(message = "{UsuariosBean.usuario.InvalidNotNullNombreUsuario}")
+    @Size(min = 1, max = 20, message = "{UsuariosBean.usuario.InvalidSizeNombreUsuario}")
+    @Pattern(regexp = "[A-Za-z0-9]+", message = "no se admiten los valores digitados")
+    private String usuario;
 
-	@Valid
-	@NotEmpty(message= "{UsuariosBean.perfil.InvalidNotEmptyPerfil}")
-	private List<PerfilUsuario> perfil;
+    @Valid
+    @NotEmpty(message = "{UsuariosBean.perfil.InvalidNotEmptyPerfil}")
+    private List<PerfilUsuario> perfil;
 
-	@NotNull(message="{UsuariosBean.contrasena.InvalidNotNullContrasena}")
-	@Size(min = 1, max = 2048, message="{UsuariosBean.contrasena.InvalidSizeContrasena}")
-	@Pattern(regexp="[A-Za-z0-9]+", message="{UsuariosBean.contrasena.InvalidPatternContrasena}")
-	private String contrasena;
+    @NotNull
+    @Valid
+    private PerfilUsuario perfilUsuarioSeleccionado;
 
-	@NotNull(message="{UsuariosBean.confirmarContrasena.InvalidNotNullContrasena}")
-	@Size(min = 1, max = 2048, message="{UsuariosBean.confirmarContrasena.InvalidSizeContrasena}")
-	@Pattern(regexp="[A-Za-z0-9]+", message="{UsuariosBean.confirmarContrasena.InvalidPatternContrasena}")
-	private String confirmarContrasena;
+    @NotNull(message = "{UsuariosBean.contrasena.InvalidNotNullContrasena}")
+    @Size(min = 1, max = 2048, message = "{UsuariosBean.contrasena.InvalidSizeContrasena}")
+    @Pattern(regexp = "[A-Za-z0-9]+", message = "{UsuariosBean.contrasena.InvalidPatternContrasena}")
+    private String contrasena;
 
-	@Valid
-	@NotEmpty (message= "{UsuariosBean.rol.InvalidEmptyRol}")
-	private String ceo_sn;
-        
-        @Valid
-	@NotEmpty (message= "{UsuariosBean.rol.InvalidEmptyRol}")
-	private String adm_sn;
-        
-        @Valid
-	@NotEmpty (message= "{UsuariosBean.rol.InvalidEmptyRol}")
-	private String pro_sn;
-        
-        @Valid
-	@NotEmpty (message= "{UsuariosBean.rol.InvalidEmptyRol}")
-	private String cli_sn;
+    @NotNull(message = "{UsuariosBean.confirmarContrasena.InvalidNotNullContrasena}")
+    @Size(min = 1, max = 2048, message = "{UsuariosBean.confirmarContrasena.InvalidSizeContrasena}")
+    @Pattern(regexp = "[A-Za-z0-9]+", message = "{UsuariosBean.confirmarContrasena.InvalidPatternContrasena}")
+    private String confirmarContrasena;
 
-	@NotNull(message="{UsuariosBean.nombre.InvalidNotNullNombre}")
-	@Size(min = 1, max = 100, message = "{UsuariosBean.nombre.InvalidSizeNombre}")
-	@Pattern(regexp="[A-Za-z]+", message="{UsuariosBean.nombre.InvalidPatternNombre}")
-	private String nombre;
+    @Valid
+    //@NotEmpty (message= "{UsuariosBean.rol.InvalidEmptyRol}")
+    private Boolean ceo_sn;
 
-	@Email(message = "{UsuariosBean.correo.InvalidEmailCorreo}")
-	private String correo;
+    @Valid
+    //@NotEmpty (message= "{UsuariosBean.rol.InvalidEmptyRol}")
+    private Boolean adm_sn;
 
-	@Valid
-	@NotNull(message= "{UsuariosBean.estado.InvalidNotNull}")
-	private List<EstadoUsuario> estado;
+    @Valid
+    //@NotEmpty (message= "{UsuariosBean.rol.InvalidEmptyRol}")
+    private Boolean pro_sn;
 
-	@Valid
-	@NotNull(message= "{UsuariosBean.tipoIdentificacion.InvalidNotNullTipoIdentificacion}")
-	private List<TipoIdentificacion> tipoIdentificacion;
+    @Valid
+    //@NotEmpty (message= "{UsuariosBean.rol.InvalidEmptyRol}")
+    private Boolean cli_sn;
 
-	@NotNull(message = "{UsuariosBean.numeroIdentificacion.InvalidNotNullNumeroIdentificacion}")
-	@Size(min = 1, max = 30, message="{UsuariosBean.numeroIdentificacion.InvalidSizeNumeroIdentificacion}")
-	@Pattern(regexp="[A-Za-z0-9]+", message="{UsuariosBean.numeroIdentificacion.InvalidPatternNumeroIdentificacion}")
-	private String numeroIdentificacion;
-        
-        private String ultconexion;
+    @NotNull(message = "{UsuariosBean.nombre.InvalidNotNullNombre}")
+    @Size(min = 1, max = 100, message = "{UsuariosBean.nombre.InvalidSizeNombre}")
+    @Pattern(regexp = "[A-Za-z]+()", message = "{UsuariosBean.nombre.InvalidPatternNombre}")
+    private String nombre;
+
+    @NotNull(message = "{UsuariosBean.nombre.InvalidEmailCorreo}")
+    @Email(message = "{UsuariosBean.correo.InvalidEmailCorreo}")
+    private String correo;
+
+    @Valid
+    @NotNull(message = "{UsuariosBean.estado.InvalidNotNull}")
+    private List<EstadoUsuario> estado;
+
+    @NotNull
+    @Valid    
+    private EstadoUsuario estadoSeleccionado;
+
+    @Valid
+    @NotNull(message = "{UsuariosBean.tipoIdentificacion.InvalidNotNullTipoIdentificacion}")
+    private List<TipoIdentificacion> tipoIdentificacion;
+
+    @NotNull
+    @Valid
+    private TipoIdentificacion tipoIdentificacionSeleccionado;
+
+    @NotNull(message = "{UsuariosBean.numeroIdentificacion.InvalidNotNullNumeroIdentificacion}")
+    //@Size(min = 1, max = 30, message = "{UsuariosBean.numeroIdentificacion.InvalidSizeNumeroIdentificacion}")
+    //@Pattern(regexp = "[A-Za-z0-9]+", message = "{UsuariosBean.numeroIdentificacion.InvalidPatternNumeroIdentificacion}")
+    private int numeroIdentificacion;
+
+    private String ultconexion;
+
+    private String rolesselec;
+
+    public String getRolesselec() {
+        return rolesselec;
+    }
+
+    public void setRolesselec(String rolesselec) {
+        this.rolesselec = rolesselec;
+    }
 
     public String getUltconexion() {
         return ultconexion;
     }
 
+    //Getters and Setters
     public void setUltconexion(String ultconexion) {
         this.ultconexion = ultconexion;
     }
-        
 
-	//Getters and Setters
+    public TipoIdentificacion getTipoIdentificacionSeleccionado() {
+        return tipoIdentificacionSeleccionado;
+    }
+
+    public void setTipoIdentificacionSeleccionado(TipoIdentificacion tipoIdentificacionSeleccionado) {
+        this.tipoIdentificacionSeleccionado = tipoIdentificacionSeleccionado;
+    }
+
+    public EstadoUsuario getEstadoSeleccionado() {
+        return estadoSeleccionado;
+    }
+
+    public void setEstadoSeleccionado(EstadoUsuario estadoSeleccionado) {
+        this.estadoSeleccionado = estadoSeleccionado;
+    }
+
+    public PerfilUsuario getPerfilUsuarioSeleccionado() {
+        return perfilUsuarioSeleccionado;
+    }
+
+    public void setPerfilUsuarioSeleccionado(PerfilUsuario perfilUsuarioSeleccionado) {
+        this.perfilUsuarioSeleccionado = perfilUsuarioSeleccionado;
+    }
 
     public String getUsuario() {
         return usuario;
@@ -112,35 +158,35 @@ public class UsuariosBean implements Serializable{
         this.confirmarContrasena = confirmarContrasena;
     }
 
-    public String getCeo_sn() {
+    public Boolean getCeo_sn() {
         return ceo_sn;
     }
 
-    public void setCeo_sn(String ceo_sn) {
+    public void setCeo_sn(Boolean ceo_sn) {
         this.ceo_sn = ceo_sn;
     }
 
-    public String getAdm_sn() {
+    public Boolean getAdm_sn() {
         return adm_sn;
     }
 
-    public void setAdm_sn(String adm_sn) {
+    public void setAdm_sn(Boolean adm_sn) {
         this.adm_sn = adm_sn;
     }
 
-    public String getPro_sn() {
+    public Boolean getPro_sn() {
         return pro_sn;
     }
 
-    public void setPro_sn(String pro_sn) {
+    public void setPro_sn(Boolean pro_sn) {
         this.pro_sn = pro_sn;
     }
 
-    public String getCli_sn() {
+    public Boolean getCli_sn() {
         return cli_sn;
     }
 
-    public void setCli_sn(String cli_sn) {
+    public void setCli_sn(Boolean cli_sn) {
         this.cli_sn = cli_sn;
     }
 
@@ -176,15 +222,12 @@ public class UsuariosBean implements Serializable{
         this.tipoIdentificacion = tipoIdentificacion;
     }
 
-    public String getNumeroIdentificacion() {
+    public int getNumeroIdentificacion() {
         return numeroIdentificacion;
     }
 
-    public void setNumeroIdentificacion(String numeroIdentificacion) {
+    public void setNumeroIdentificacion(int numeroIdentificacion) {
         this.numeroIdentificacion = numeroIdentificacion;
     }
-
-
-	
 
 }

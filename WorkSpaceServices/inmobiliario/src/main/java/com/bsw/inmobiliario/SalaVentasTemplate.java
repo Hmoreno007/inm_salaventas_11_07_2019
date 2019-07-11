@@ -2,6 +2,7 @@ package com.bsw.inmobiliario;
 
 import com.digitrust.portal.AppPortalConstant;
 import com.digitrust.portal.BasePortalPage;
+import com.googlecode.wicket.jquery.core.panel.LoadingPanel;
 import org.apache.wicket.Component;
 import org.apache.wicket.markup.head.CssHeaderItem;
 import org.apache.wicket.markup.head.IHeaderResponse;
@@ -17,7 +18,7 @@ public class SalaVentasTemplate extends BasePortalPage {
 
     public SalaVentasTemplate(PageParameters parameters) {
         super(parameters);
-        queue(contentPanel = new MainPanel("contentPanel"));
+        queue(contentPanel = new LoginPage("contentPanel"));
     }
 
     public SalaVentasTemplate(IModel<?> model) {

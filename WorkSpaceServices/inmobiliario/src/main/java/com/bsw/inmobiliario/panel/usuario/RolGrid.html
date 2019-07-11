@@ -1,0 +1,35 @@
+<wicket:head>  
+    <title>Roles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../node_modules/w3-css/w3.css" type="text/css"/>
+
+</wicket:head>     
+<wicket:panel>               
+    <table wicket:id="data" class="w3-responsive w3-table w3-striped w3-bordered w3-border w3-hoverable"> 
+        <thead>
+            <tr  class="w3-indigo">
+                <th><b>Rol</b></th>
+                <th><b>Descripcion</b></th>                  
+                <th><b>Selec.</b></th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr wicket:id="rows">
+                <td wicket:id="rol"></td>
+                <td wicket:id="descripcion"></td>                                       
+                <td>                                                         
+                    <input wicket:id="checkboxhtml" type="checkbox">
+                </td>  
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td wicket:id="navigator"></td>
+                <td><a wicket:id="grabar" class="w3-btn w3-white w3-border w3-border-blue w3-round-xlarge">Grabar</a></td>
+            </tr>               
+        </tfoot>                 
+
+    </table>     
+</wicket:panel>

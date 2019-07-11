@@ -12,15 +12,15 @@ import java.util.List;
  * @author bswndeshm
  */
 public class Usuarioslist {
-    public List<UsuariosBean> usuarios;
+    public List<Usuario> usuarios;
 
-    public List<UsuariosBean> getUsuarios() {
+    public List<Usuario> getUsuarios() {
         return usuarios;
     }
 
-    public void setUsuarios(List<UsuariosBean> usuarios) {
+    public void setUsuarios(List<Usuario> usuarios) {
         this.usuarios = usuarios;
     }
-    
+
     
 }

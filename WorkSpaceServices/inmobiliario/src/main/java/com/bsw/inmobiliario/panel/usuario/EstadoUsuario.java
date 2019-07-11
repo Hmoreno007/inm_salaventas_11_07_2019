@@ -5,15 +5,21 @@
  */
 package com.bsw.inmobiliario.panel.usuario;
 
+import java.io.Serializable;
+import javax.validation.constraints.NotNull;
+
 /**
  *
  * @author bswndeshm
  */
-public class EstadoUsuario {
+public class EstadoUsuario implements Serializable{
+    @NotNull(message = "{UsuariosBean.estado.InvalidNotNull}")
     private String estado;
     
+    @NotNull(message = "{UsuariosBean.estado.InvalidNotNull}")
     private String descripcion;
     
+    @NotNull(message = "{UsuariosBean.estado.InvalidNotNull}")
     private String ingresoSN;
 
     public String getEstado() {

@@ -1,0 +1,25 @@
+<wicket:head>  
+    <title>Login Page</title>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../node_modules/w3-css/w3.css" type="text/css"/>
+
+</wicket:head>     
+<wicket:panel>  
+    <div wicket:id="loginpanel" class="w3-container w3-responsive w3-row">
+        <div class="w3-col s4  w3-center"></div>
+        <div class="w3-col s4  w3-center">
+            <form wicket:id="formlogin">
+                <span>User id:</span><input class="w3-input w3-border-blue" type="text" wicket:id="username"/><br/>
+                <span>Password:</span><input class="w3-input w3-border-blue" type="text" wicket:id="password"/><br/>
+                <input value="Ingresar" type="button" class="w3-btn w3-white w3-border w3-border-blue w3-round-xlarge" wicket:id="submit"/>              
+            </form>
+        </div>
+        <div class="w3-col s4  w3-center"></div>
+    </div>
+    <div class="w3-cell-row"  wicket:id="windowmain">
+        <div class="w3-card-2">
+            <a class="w3-btn w3-white w3-border w3-border-blue w3-round w3-right" wicket:id="logout" style="text-decoration: none;"><b><img src="https://image.flaticon.com/icons/svg/660/660657.svg" width="20" height="20"></b></a><br>
+            <div wicket:id="mainpanels"></div>
+        </div>
+    </div>
+</wicket:panel>

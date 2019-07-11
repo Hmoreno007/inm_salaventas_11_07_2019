@@ -5,18 +5,28 @@
  */
 package com.bsw.inmobiliario.panel.usuario;
 
+import java.io.Serializable;
+import javax.validation.Valid;
+import org.hibernate.validator.constraints.NotEmpty;
+
 
 
 /**
  *
  * @author bswndeshm
  */
-public class PerfilUsuario {
+public class PerfilUsuario implements Serializable{
     
+    @Valid
+    @NotEmpty(message = "{UsuariosBean.perfil.InvalidNotEmptyPerfil}")
     private String codigoPerfil;
     
+    @Valid
+    @NotEmpty(message = "{UsuariosBean.perfil.InvalidNotEmptyPerfil}")
     private String descripcionPerfil;
     
+    @Valid
+    @NotEmpty(message = "{UsuariosBean.perfil.InvalidNotEmptyPerfil}")
     private String tipoUsuario;
     
     public String getCodigoPerfil() {

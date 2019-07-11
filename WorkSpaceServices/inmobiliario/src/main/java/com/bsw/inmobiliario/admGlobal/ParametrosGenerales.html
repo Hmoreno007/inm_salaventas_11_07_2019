@@ -1,0 +1,46 @@
+<wicket:head> 
+    <style>
+    </style>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</wicket:head>
+<wicket:panel> 
+    <div class="w3-cell-row" style="width:100%">
+        <div class="w3-col s10 w3-center">
+            <div class="w3-container w3-border-aqua">
+                <div wicket:id="formpanel">
+                    <form>                                          
+                        <div class="w3-col s12 m6 l4">
+                            <div class="w3-container">
+                                <div class="w3-display-container">              
+                                    <button  type="button"   style="border-radius: 30px;" wicket:id="openestadosinm"><b>Estado inmuebles</b></button>
+                                </div>
+                            </div>       
+                        </div>  
+                        <div class="w3-col s12 m6 l4">
+                            <div class="w3-container">
+                                <div class="w3-display-container">                                 
+                                    <button  type="button"  style="border-radius: 30px;" wicket:id="opentipoinm"><b>Tipo Inmuebles</b></button>
+                                </div>
+                            </div>      
+                        </div>
+                        <div class="w3-col s12 m6 l4">
+                            <div class="w3-container">
+                                <div class="w3-display-container">                                 
+                                    <button type="button"  style="border-radius: 30px;" wicket:id="openabonos"><b>Abonos</b></button>
+                                </div>
+                            </div>      
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="w3-modal"  wicket:id="windowparameters" style="display:block;">
+            <div class="w3-modal-content">
+                <a class="w3-right w3-button w3-tiny w3-ripple w3-padding-small w3-indigo" wicket:id="closecontentpanels" style="text-decoration: none;"><b>Close</b></a><br>
+                <div wicket:id="contentparameters"></div>
+            </div>
+        </div> 
+    </div> 
+</wicket:panel> 

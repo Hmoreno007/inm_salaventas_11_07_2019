@@ -5,13 +5,19 @@
  */
 package com.bsw.inmobiliario.panel.usuario;
 
+import java.io.Serializable;
+import javax.validation.constraints.NotNull;
+
 /**
  *
  * @author bswndeshm
  */
-public class TipoIdentificacion {
+public class TipoIdentificacion implements Serializable{
+    @NotNull(message = "{UsuariosBean.tipoIdentificacion.InvalidNotNullTipoIdentificacion}")
     private String claseDocumento;
+    @NotNull(message = "{UsuariosBean.tipoIdentificacion.InvalidNotNullTipoIdentificacion}")
      private String descripDocumento;
+    
      private int cod_Superfinanciera;
      private String cod_Mundosotf;
      private String usuario;
