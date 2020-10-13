@@ -14,7 +14,7 @@
         <jetty9.version>9.2.13.v20150730</jetty9.version>
         <slf4j.version>1.7.22</slf4j.version>
         <log4j.version>2.5</log4j.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <jetspeed-2.version>2.3.1</jetspeed-2.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <wtp.version>2.0</wtp.version>
